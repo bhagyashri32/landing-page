@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato",sans-serif;
+
+}
+
+body{
+    overflow-x: hidden ;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(background-image.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.runway{
+    width: 100%;
+    height: 200px;
+    background: url(road1.webp);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.ppp{
+    width: 320px;
+    position: absolute;
+    bottom: 150px;
+    right: -200px;
+    animation: plane 4s linear infinite;
+    transform-origin: 100% 50%;
+    z-index: 10;
+    opacity: 0.7;
+}
+
+@keyframes plane {
+    0%{
+        transform: translateX(0px) translateY(0px) rotate(0deg) ;
+    }
+
+    30%{
+        transform: translateX(-500px) translateY(0px) rotate(0deg) ;
+    }
+
+    100%{
+        transform: translateX(-1500px) translatey(-200px) rotate(20deg) ;
+    }
+}
+
+.menu{
+    height: 75px;
+    width: 90%;
+    position: absolute;
+    padding: 0 30px;
+    top: 0;
+    left: 5%;
+    background: #fff;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.23);
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+}
+
+.nav li:not(:last-child){
+    margin-right: 30px;
+}
+
+.logo h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(17, 16, 17);
+}
+
+.nav li a {
+    color: rgb(78, 16, 136);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content{
+    width: 75%;
+    height: 500px;
+    position: absolute;
+    top: 18%;
+    left: 12.5%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.hero-heading{
+    margin: 10px auto;
+    width: 40%;
+    background-color: #2f55c9;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.hero-heading h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+}
+
+.row{
+    width: 100%;
+    height: 280px;
+    margin: 30px 0;
+    background: rgba(17, 147, 233, 0.6);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.col{
+    width: 50%;
+    padding: 20px;
+}
+
+.destinations {
+    line-height: 32px;
+}
+ .destinations h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: blue;
+    background: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+ }
+
+ .destination ul {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+ }
+
+ .banner img{
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+    border-radius: 30px;
+ }
+
+ .btn{
+    padding: 10px;
+    background: #0b2f7c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+ }
+
+ @media (max-width : 768px){
+    body{
+        background-image: url(road1.webp);
+    }
+
+    .airplane{
+        width: 180px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .content{
+        width: 90%;
+        height: 700px;
+        left: 5%;
+        top: 15%;
+    }
+
+    .hero-heading{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .row{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner img{
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 40px;
+    }
+ }
